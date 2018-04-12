@@ -1,0 +1,60 @@
+#Install COPRTHR SDK
+#PARALLELLA PAGE:
+#https://www.parallella.org/2013/03/08/introduction-to-parallella-and-opencl/ 
+#http://www.browndeertechnology.com/coprthr_download.htm
+#GITHUB PAGE:
+#https://github.com/browndeer/coprthr (Procedure Explained)
+
+sudo apt-get install gmake
+
+apt-get install freebsd-glue
+
+sudo aptitude 
+install bison
+
+sudo apt-get install flex
+
+gitclone libelf
+
+#Installation is straightforward - the package is autoconf'ed. Just do
+cd libelf-0.8.13
+./configure 
+make 
+sudo make install
+
+#''. Header files will be installed in .../include/libelf/.
+
+libconfig
+./configure
+make
+sudo make install
+
+sudo aptitude install autogen
+The following NEW packages will be installed:
+autogen autogen-doc{a} libopts25{a} libopts25-dev{a} 
+0 packages upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1,714 kB of archives. After unpacking 5,179 kB will be used.
+Do you want to continue? [Y/n/?] Y
+autogen
+./configure && make
+
+DOWNLOAD libevent-2.0.18/
+OR
+GIT CLONE libevent-2.0.21-stable
+{ls -al}
+{head autogen.sh}
+bash autogen.sh
+ls -alrt
+date
+./configure
+ls -lart
+make
+sudo make install
+make verify
+
+cd coprthr
+./configure
+make
+ls -alrt
+make clean
+sudo make install
